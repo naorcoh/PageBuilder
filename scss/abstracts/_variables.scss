@@ -1,0 +1,22 @@
+//colors
+$primary: #2e2e2e;
+$secondary: #efe;
+$bg-primary: #f6f6f6ee;
+
+//box-shadow
+$shadow-1: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+
+//typography
+$typo-primary: white;
+$typo-secondary: black;
+
+//spacers
+$spacer: 1em;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+);

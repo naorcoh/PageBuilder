@@ -1,0 +1,24 @@
+@use "../abstracts";
+/*------------------------------------*\
+  #RESET
+\*------------------------------------*/
+/* Preferred box-sizing value */
+html {
+  box-sizing: border-box;
+}
+body {
+  background: abstracts.$bg-primary;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+button {
+  //   font-size: 1rem;
+  font-family: inherit;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+}

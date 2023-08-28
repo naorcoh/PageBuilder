@@ -1,0 +1,38 @@
+@use "../abstracts";
+@use "sass:map";
+/*------------------------------------*\
+  #FORM
+\*------------------------------------*/
+$form-padding: map.get(abstracts.$spacers, 3);
+$form-gap: map.get(abstracts.$spacers, 2);
+$template-areas: "label-bg" "input-bg" "label-w" "input-w" "label-h" "input-h"
+  "label-cont" "textarea" "label-font" "input-font-color" "label-font-size"
+  "input-font-size" "button1 button2";
+$area: button;
+
+.form {
+  //box
+  width: 100%;
+  text-align: right;
+  padding: $form-padding;
+  //inner display
+  display: grid;
+
+  grid-auto-columns: minmax(100%, 1fr);
+
+  gap: $form-gap;
+
+  &__send {
+    display: flex;
+    gap: 0.5em;
+    > .btn {
+      flex: 1;
+    }
+  }
+}
+
+// @media screen and (max-width: 768px) {
+//   .form {
+//     display: none;
+//   }
+// }

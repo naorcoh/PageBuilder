@@ -1,0 +1,51 @@
+@use "../abstracts";
+/*------------------------------------*\
+  #COLUMN-LAYOUT
+\*------------------------------------*/
+.column-layout {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  min-height: 100vh;
+
+  &__sidebar {
+    //size
+
+    //background
+    background: abstracts.$primary;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-image: url("../../images/1.png");
+    background-size: 20%;
+    //typo
+    color: abstracts.$typo-primary;
+  }
+
+  &__page {
+    background: white;
+    box-shadow: abstracts.$shadow-1;
+    width: 75%;
+    min-height: 95vh;
+    align-self: end;
+    justify-self: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .column-layout {
+    grid-template-columns: 1fr;
+    &__sidebar {
+      grid-row: 2/3;
+    }
+
+    &__page {
+      width: 100%;
+    }
+  }
+}
+
+// @container (inline-size >= 64px) {
+//   .container-xl {
+//     background: green;
+//     max-width: 20%;
+//   }
+// }

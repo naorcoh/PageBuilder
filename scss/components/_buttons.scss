@@ -1,0 +1,21 @@
+@use "../abstracts";
+@use "sass:map";
+/*------------------------------------*\
+  #BUTTONS
+\*------------------------------------*/
+$btn-padding-inline: map.get(abstracts.$spacers, 1);
+$btn-padding-block: map.get(abstracts.$spacers, 2);
+$btn-margin: 0.25rem;
+$btn-border-radius: 0.25rem;
+
+// $btn-padding-block: map.get(abstracts.$spacers, 2);
+
+.btn {
+  width: auto;
+  background-color: #c23474;
+  color: whitesmoke;
+  padding: $btn-padding-inline $btn-padding-block;
+  border-radius: $btn-border-radius;
+  margin: $btn-margin;
+  line-height: 1.2;
+}
