@@ -13,35 +13,75 @@
         <aside class="column-layout__sidebar">
           <h1>בונה מסכים</h1>
           <form class="form">
+            <label for="element-type">סוג האלמנט</label>
+            <select name="element-type" id="elmType">
+              <option value="p">&#60;p&#62;</option>
+              <option value="div">&#60;div&#62;</option>
+              <option value="a">&#60;a&#62;</option>
+              <option value="ul">&#60;ul&#62;</option>
+              <option value="li">&#60;li&#62;</option>
+            </select>
             <label for="bg-color">בחר צבע רקע</label>
-            <input type="color" name="bg-color" id="bgColor" />
+            <input
+              type="color"
+              value="#ffffff"
+              name="bg-color"
+              id="elmBgColor"
+            />
             <label for="elm-width">רוחב האלמנט</label>
-            <input type="number" name="elm-width" id="elmWidth" />
-            <label for="elm-height">רוחב האלמנט</label>
-            <input type="number" name="elm-height" id="elmHeight" />
+            <div>
+              <input type="number" name="elm-width" id="elmWidth" />
+              <select name="width-units" id="widthUnits">
+                <option value="px">px</option>
+                <option value="percentage">%</option>
+                <option value="rem">rem</option>
+                <option value="em">em</option>
+                <option value="vw">vw</option>
+              </select>
+            </div>
+            <label for="elm-height">גובה האלמנט</label>
+            <div>
+              <input type="number" name="elm-height" id="elmHeight" />
+              <select name="height-units" id="heightUnits">
+                <option value="px">px</option>
+                <option value="percentage">%</option>
+                <option value="rem">rem</option>
+                <option value="em">em</option>
+                <option value="vh">vh</option>
+              </select>
+            </div>
             <label for="content">תוכן</label>
             <textarea
               name="content"
-              id="content"
+              id="txtContent"
               cols="30"
               rows="10"
             ></textarea>
-            <label for="font-color">צבע גופן</label>
-            <input type="color" name="font-color" id="fontColor" />
-            <label for="font-size">גודל גופן</label>
-            <select name="font-size" id="fontSize">
+            <label for="font">סוג גופן</label>
+            <select name="font" id="font">
               <option value="Arial">Arial</option>
               <option value="Verdana">Verdana</option>
               <option value="Tahoma">Tahoma</option>
             </select>
-
+            <div class="">
+              <label for="font-size">גודל גופן</label>
+              <input type="number" name="font-size" id="fontSize" />
+              <select name="size-units" id="sizeUnits">
+                <option value="px">px</option>
+                <option value="rem">rem</option>
+                <option value="em">em</option>
+                <option value="vw">vw</option>
+              </select>
+            </div>
+            <label for="font-color">צבע גופן</label>
+            <input type="color" name="font-color" id="fontColor" />
             <div class="form__send">
               <button class="btn" id="btnSend">שליחה</button>
               <button class="btn" id="btnSave">שמירה</button>
             </div>
           </form>
         </aside>
-        <div class="column-layout__page"></div>
+        <div class="column-layout__page" id="page"></div>
       </div>
     </main>
   </body>
